@@ -1,5 +1,5 @@
 # player-manager
-Add players and set your lineup for an upcoming three game series
+Full stack MERN app that uses React, MongoDB, Express and Node.js to Add players and set your lineup for an upcoming three game series
 
 
 ![image](https://user-images.githubusercontent.com/24249474/112545424-6f202600-8d75-11eb-998f-5f03d118f0dd.png)
