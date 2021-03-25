@@ -7,6 +7,7 @@ const FormPage = props => {
     const [errors, setErrors] = useState([]);
     const [bats, setBats] = useState("R");
     const [throws, setThrows] = useState("R");
+    const [jerseyNumber, setJerseyNumber] = useState(0);
 
     const createPlayer = e => {
         e.preventDefault();
@@ -14,7 +15,8 @@ const FormPage = props => {
             name: name,
             position: position,
             bats: bats,
-            throws: throws
+            throws: throws,
+            jerseyNumber: jerseyNumber
         }
         console.log(player);
         axios.post("http://localhost:8000/api/players", player) 
@@ -35,6 +37,7 @@ const FormPage = props => {
                     setName("");
                     setPosition("");
                     setErrors("");
+                    setJerseyNumber(0);
                 }
             })
             .catch(err => console.log("Error ", err))
@@ -61,6 +64,10 @@ const FormPage = props => {
                             <div className="col">
                                 <label className="form-group" htmlFor="throws">Throws</label>
                                 <input className="form-control" type="text" name="throws" id="throws" placeholder="Optional" value={throws} onChange={e => setThrows(e.target.value)}/>
+                            </div>
+                            <div className="col">
+                                <label className="form-group" htmlFor="jerseyNumber">Number</label>
+                                <input className="form-control" type="number" name="jerseyNumber" id="jerseyNumber" value={jerseyNumber} onChange={e => setJerseyNumber(e.target.value)}/>
                             </div>
                         </div>
                     </div>
