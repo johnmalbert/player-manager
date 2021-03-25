@@ -14,6 +14,22 @@ const PlayerSchema = new mongoose.Schema({
     active: {
         type: Array,
         default: [0,0,0] //(0 = undecided, 1 = not playing, 2 = playing)
+    },
+    bats: {
+        type: String,
+        default: "R",
+        maxLength: [1]
+    },
+    throws: {
+        type: String,
+        default: "R",
+        maxLength: [1]
+    },
+    jerseyNumber: {
+        type: Number,
+        min: [0, "Number must be higher than 0"],
+        max: [99, "Number must be two digits only"],
+        default: 1
     }
 }, {timestamps: true});
 

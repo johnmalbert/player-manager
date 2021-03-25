@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import mariners from './mariners.jpg';
 import './App.css';
 import { Link } from '@reach/router';
