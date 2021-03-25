@@ -1,6 +1,6 @@
 import React from 'react'
 import DeleteButton from './DeleteButton';
-
+import guy from '../guy.jpg';
 const PlayersList = props => {
     const { allPlayers, setAllPlayers, loaded } = props;
     
@@ -9,10 +9,11 @@ const PlayersList = props => {
     }
     return (
         <div>
-            <table className="table table-dark">
+            <table className="table table-dark text-center">
                 <thead>
                 <tr>
                 <th scope="col">#</th>
+                <th scope="col">Photo</th>
                 <th scope="col">Player Name</th>
                 <th scope="col">Preferred Position</th>
                 <th scope="col">Bats</th>
@@ -26,6 +27,7 @@ const PlayersList = props => {
                 allPlayers.map((player, i) =>
                     <tr key={i}>
                         <th scope="row">{player.jerseyNumber}</th>
+                        <td><img style={{height: "40px"}} src={guy} alt="Player Photo"/></td>
                         <td>{player.name}</td>
                         <td>{player.position}</td>
                         <td>{player.bats}</td>

@@ -9,7 +9,7 @@ const Game3 = props => {
     }
     return (
         <div>
-            <table className="table table-dark">
+            <table className="table table-dark text-center">
                 <thead>
                 <tr>
                 <th scope="col">#</th>
